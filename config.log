@@ -1,4 +1,4 @@
-# ./configure --toolchain=msvc --enable-gpl --enable-nonfree --enable-cuda --enable-cuvid --enable-nvenc --enable-ffnvcodec --extra-cflags='-IC:/NVIDIA/nv-codec-headers/include -IC:/CUDA/v13.0/include' --extra-ldflags='-LIBPATH:C:/NVIDIA/nv-codec-headers/Lib/x64 -LIBPATH:C:/CUDA/v13.0/lib/x64'
+# ./configure --toolchain=msvc --enable-gpl --enable-nonfree --enable-cuda --enable-cuvid --enable-nvenc --enable-ffnvcodec --extra-cflags='-IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include' --extra-ldflags='-LIBPATH:C:\NVIDIA\nv-codec-headers\Lib\x64 -LIBPATH:C:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\lib\x64'
 ACLOCAL_PATH=/mingw64/share/aclocal:/usr/share/aclocal
 ALLUSERSPROFILE='C:\ProgramData'
 ALL_COMPONENTS='
@@ -4872,8 +4872,8 @@ BASH_CMDS=()
 BASH_LINENO=([0]="0")
 BASH_LOADABLES_PATH=/usr/local/lib/bash:/usr/lib/bash:/opt/local/lib/bash:/usr/pkg/lib/bash:/opt/pkg/lib/bash:.
 BASH_SOURCE=([0]="./configure")
-BASH_VERSINFO=([0]="5" [1]="2" [2]="37" [3]="2" [4]="release" [5]="x86_64-pc-cygwin")
-BASH_VERSION='5.2.37(2)-release'
+BASH_VERSINFO=([0]="5" [1]="2" [2]="37" [3]="1" [4]="release" [5]="x86_64-pc-msys")
+BASH_VERSION='5.2.37(1)-release'
 BSF_LIST='aac_adtstoasc_bsf
 ahx_to_mp2_bsf
 apv_metadata_bsf
@@ -6271,7 +6271,7 @@ vvc_qsv_decoder
 vnull_decoder
 anull_decoder
 '
-COLUMNS=100
+COLUMNS=120
 COMMONPROGRAMFILES='C:\Program Files\Common Files'
 COMPONENT_LIST='
     
@@ -6701,10 +6701,13 @@ CONFIG_LIST='
 
 '
 CONFIG_SITE=/etc/config.site
+CUDA_INC='C:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include'
+CUDA_LIB='C:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\lib\x64'
 CUDA_PATH='C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.0'
 CUDA_PATH_V13_0='C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.0'
 CXX_C=-c
 CXX_O='-o $@'
+CommandPromptType=Native
 CommonProgramW6432='C:\Program Files\Common Files'
 DECODER_LIST='aasc_decoder
 aic_decoder
@@ -7680,6 +7683,7 @@ vapoursynth_demuxer'
 DEPCMD='$(DEP$(1)) $(DEP$(1)FLAGS) $($(1)DEP_FLAGS) $< 2>/dev/null | sed -e "/^\#.*/d" -e "s,^[[:space:]]*$(@F),$(@D)/$(@F)," > $(@:.o=.d)'
 DEPFLAGS=-MM
 DIRSTACK=()
+DISPLAY=needs-to-be-defined
 DOCUMENT_LIST='
     doc
     htmlpages
@@ -7687,6 +7691,7 @@ DOCUMENT_LIST='
     podpages
     txtpages
 '
+DevEnvDir='C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\'
 DriverData='C:\Windows\System32\Drivers\DriverData'
 E1=0
 E2=1
@@ -7986,6 +7991,7 @@ EXAMPLE_LIST='
     vaapi_transcode_example
     qsv_transcode_example
 '
+EXEPATH='C:\Program Files\Git\bin'
 EXTERNAL_AUTODETECT_LIBRARY_LIST='
     alsa
     appkit
@@ -8007,6 +8013,7 @@ EXTERNAL_AUTODETECT_LIBRARY_LIST='
     xlib
     zlib
 '
+EXTERNAL_INCLUDE='C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include;C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.19041.0\\um;C:\Program Files (x86)\Windows Kits\10\\include\10.0.19041.0\\shared;C:\Program Files (x86)\Windows Kits\10\\include\10.0.19041.0\\winrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.19041.0\\cppwinrt'
 EXTERNAL_LIBRARY_GPLV3_LIST='
     libsmbclient
 '
@@ -8171,6 +8178,7 @@ EXTRALIBS_LIST='
     cpu_init
     cws2fws
 '
+ExtensionSdkDir='C:\Program Files (x86)\Microsoft SDKs\Windows Kits\10\ExtensionSDKs'
 FEATURE_LIST='
     ftrapv
     gray
@@ -8184,7 +8192,7 @@ FEATURE_LIST='
     swscale_alpha
     unstable
 '
-FFMPEG_CONFIGURATION='--toolchain=msvc --enable-gpl --enable-nonfree --enable-cuda --enable-cuvid --enable-nvenc --enable-ffnvcodec --extra-cflags='\''-IC:/NVIDIA/nv-codec-headers/include -IC:/CUDA/v13.0/include'\'' --extra-ldflags='\''-LIBPATH:C:/NVIDIA/nv-codec-headers/Lib/x64 -LIBPATH:C:/CUDA/v13.0/lib/x64'\'''
+FFMPEG_CONFIGURATION='--toolchain=msvc --enable-gpl --enable-nonfree --enable-cuda --enable-cuvid --enable-nvenc --enable-ffnvcodec --extra-cflags='\''-IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include'\'' --extra-ldflags='\''-LIBPATH:C:\NVIDIA\nv-codec-headers\Lib\x64 -LIBPATH:C:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\lib\x64'\'''
 FILTER_LIST='aap_filter
 abench_filter
 acompressor_filter
@@ -8773,6 +8781,11 @@ avsynctest_filter
 amovie_filter
 movie_filter'
 FULLNAME='$(NAME)$(BUILDSUF)'
+Framework40Version=v4.0
+FrameworkDir='C:\Windows\Microsoft.NET\Framework64\'
+FrameworkDir64='C:\Windows\Microsoft.NET\Framework64\'
+FrameworkVersion=v4.0.30319
+FrameworkVersion64=v4.0.30319
 GROUPS=()
 HAVE_LIST='
     
@@ -9276,7 +9289,7 @@ HEADERS_LIST='
     windows_h
     winsock2_h
 '
-HOME=/home/jacob
+HOME=/c/Users/jacob
 HOMEDRIVE=C:
 HOMEPATH='\Users\jacob'
 HOSTCC_C=-c
@@ -9398,6 +9411,7 @@ wmv3_vaapi_hwaccel
 wmv3_vdpau_hwaccel'
 IFS=' 	
 '
+INCLUDE='C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include;C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.19041.0\\um;C:\Program Files (x86)\Windows Kits\10\\include\10.0.19041.0\\shared;C:\Program Files (x86)\Windows Kits\10\\include\10.0.19041.0\\winrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.19041.0\\cppwinrt'
 INDEV_LIST='alsa_indev
 android_camera_indev
 avfoundation_indev
@@ -9423,13 +9437,15 @@ INTRINSICS_LIST='
     intrinsics_neon
     intrinsics_sse2
 '
+LANG=en_US.UTF-8
 LC_ALL=C
-LC_CTYPE=en_US.UTF-8
-LDFLAGS=' -LIBPATH:C:/NVIDIA/nv-codec-headers/Lib/x64 -LIBPATH:C:/CUDA/v13.0/lib/x64'
+LDFLAGS=' -LIBPATH:C:\NVIDIA\nv-codec-headers\Lib\x64 -LIBPATH:C:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\lib\x64'
 LD_LIB=-l%
 LD_O='-o $@'
 LD_PATH=-L
+LIB='C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64;C:\Program Files (x86)\Windows Kits\10\lib\10.0.19041.0\ucrt\x64;C:\Program Files (x86)\Windows Kits\10\\lib\10.0.19041.0\\um\x64'
 LIBNAME='$(LIBPREF)$(FULLNAME)$(LIBSUF)'
+LIBPATH='C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\ATLMFC\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x86\store\references;C:\Program Files (x86)\Windows Kits\10\UnionMetadata\10.0.19041.0;C:\Program Files (x86)\Windows Kits\10\References\10.0.19041.0;C:\Windows\Microsoft.NET\Framework64\v4.0.30319'
 LIBPREF=lib
 LIBRARY_LIST='
     avdevice
@@ -9447,10 +9463,10 @@ LICENSE_LIST='
     nonfree
     version3
 '
-LINES=27
+LINES=30
 LOCALAPPDATA='C:\Users\jacob\AppData\Local'
 LOGONSERVER='\\DESKTOP-I67T51D'
-MACHTYPE=x86_64-pc-cygwin
+MACHTYPE=x86_64-pc-msys
 MANPATH=/mingw64/local/man:/mingw64/share/man:/usr/local/man:/usr/share/man:/usr/man:/share/man
 MATH_FUNCS='
     atanf
@@ -9486,7 +9502,6 @@ MATH_FUNCS='
 MINGW_CHOST=x86_64-w64-mingw32
 MINGW_PACKAGE_PREFIX=mingw-w64-x86_64
 MINGW_PREFIX=/mingw64
-MSYSCON=mintty.exe
 MSYSTEM=MINGW64
 MSYSTEM_CARCH=x86_64
 MSYSTEM_CHOST=x86_64-w64-mingw32
@@ -9678,17 +9693,19 @@ chromaprint_muxer'
 NUMBER_OF_PROCESSORS=16
 NVCC_C=-c
 NVCC_O='-o $@'
+NVENC_INC='C:\NVIDIA\nv-codec-headers\include'
+NVENC_LIB='C:\NVIDIA\nv-codec-headers\Lib\x64'
 OBJCC_C=-c
 OBJCC_E='-E -o $@'
 OBJCC_O='-o $@'
-OLDPWD=/home/jacob
+OLDPWD=/c/Windows/System32
 OPTERR=1
 OPTIND=1
-ORIGINAL_PATH=/c/Windows/System32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0/
-ORIGINAL_TEMP=/c/Users/jacob/AppData/Local/Temp
-ORIGINAL_TMP=/c/Users/jacob/AppData/Local/Temp
+ORIGINAL_PATH='/mingw64/bin:/usr/bin:/c/Users/jacob/bin:/c/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64:/c/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/VCPackages:/c/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TestWindow:/c/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer:/c/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/bin/Roslyn:/c/Program Files/Microsoft Visual Studio/2022/Community/Team Tools/DiagnosticsHub/Collector:/c/Program Files (x86)/Windows Kits/10/bin/10.0.19041.0/x64:/c/Program Files (x86)/Windows Kits/10/bin/x64:/c/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64:/c/Windows/Microsoft.NET/Framework64/v4.0.30319:/c/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE:/c/Program Files/Microsoft Visual Studio/2022/Community/Common7/Tools:/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.0/bin/x64:/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.0/bin:/c/Windows/system32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0:/c/Windows/System32/OpenSSH:/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit:/cmd:/c/Program Files/NVIDIA Corporation/Nsight Compute 2025.3.1:/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.0/lib/x64:/c/Users/jacob/OneDrive/Documents/MMPEG/nv-codec-headers:/c/CUDA/v13.0/bin:/c/msys64/mingw64/bin:/c/Users/jacob/AppData/Local/Microsoft/WindowsApps:/c/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin:/c/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja:/c/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/Linux/bin/ConnectionManagerExe:/c/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg'
+ORIGINAL_TEMP=/tmp
+ORIGINAL_TMP=/tmp
 OS=Windows_NT
-OSTYPE=cygwin
+OSTYPE=msys
 OUTDEV_LIST='alsa_outdev
 audiotoolbox_outdev
 caca_outdev
@@ -9765,7 +9782,7 @@ webp_parser
 xbm_parser
 xma_parser
 xwd_parser'
-PATH=/mingw64/bin:/usr/local/bin:/usr/bin:/bin:/c/Windows/System32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0/:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+PATH='/c/Users/jacob/bin:/mingw64/bin:/usr/local/bin:/usr/bin:/bin:/mingw64/bin:/usr/bin:/c/Users/jacob/bin:/c/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64:/c/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/VCPackages:/c/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TestWindow:/c/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer:/c/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/bin/Roslyn:/c/Program Files/Microsoft Visual Studio/2022/Community/Team Tools/DiagnosticsHub/Collector:/c/Program Files (x86)/Windows Kits/10/bin/10.0.19041.0/x64:/c/Program Files (x86)/Windows Kits/10/bin/x64:/c/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64:/c/Windows/Microsoft.NET/Framework64/v4.0.30319:/c/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE:/c/Program Files/Microsoft Visual Studio/2022/Community/Common7/Tools:/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.0/bin/x64:/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.0/bin:/c/Windows/system32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0:/c/Windows/System32/OpenSSH:/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit:/cmd:/c/Program Files/NVIDIA Corporation/Nsight Compute 2025.3.1:/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.0/lib/x64:/c/Users/jacob/OneDrive/Documents/MMPEG/nv-codec-headers:/c/CUDA/v13.0/bin:/c/msys64/mingw64/bin:/c/Users/jacob/AppData/Local/Microsoft/WindowsApps:/c/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin:/c/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja:/c/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/VC/Linux/bin/ConnectionManagerExe:/c/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg:/usr/bin/vendor_perl:/usr/bin/core_perl'
 PATHEXT='.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
 PATHS_LIST='
     bindir
@@ -9783,9 +9800,9 @@ PIPESTATUS=([0]="0")
 PKG_CONFIG_PATH=/mingw64/lib/pkgconfig:/mingw64/share/pkgconfig
 PKG_CONFIG_SYSTEM_INCLUDE_PATH=/mingw64/include
 PKG_CONFIG_SYSTEM_LIBRARY_PATH=/mingw64/lib
+PLINK_PROTOCOL=ssh
 POSIXLY_CORRECT=y
-PPID=1248
-PRINTER='HP ENVY 7640 series [E236E4]'
+PPID=1062
 PROCESSOR_ARCHITECTURE=AMD64
 PROCESSOR_IDENTIFIER='AMD64 Family 25 Model 33 Stepping 2, AuthenticAMD'
 PROCESSOR_LEVEL=25
@@ -9796,6 +9813,7 @@ PROGRAM_LIST='
     ffprobe
     ffmpeg
 '
+PROMPT='$P$G'
 PROTOCOL_LIST='android_content_protocol
 async_protocol
 bluray_protocol
@@ -9855,9 +9873,9 @@ PS4='+ '
 PSModulePath='C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules'
 PUBLIC='C:\Users\Public'
 PWD=/c/ffmpeg
+Platform=x64
 ProgramData='C:\ProgramData'
 ProgramW6432='C:\Program Files'
-SESSIONNAME=Console
 SHELL=/usr/bin/bash
 SHELLOPTS=braceexpand:hashall:interactive-comments:posix
 SHFLAGS='-shared -Wl,-soname,$$(@F)'
@@ -9869,6 +9887,7 @@ SLIBPREF=lib
 SLIBSUF=.so
 SLIB_INSTALL_LINKS='$(SLIBNAME_WITH_MAJOR) $(SLIBNAME)'
 SLIB_INSTALL_NAME='$(SLIBNAME_WITH_VERSION)'
+SSH_ASKPASS=/mingw64/bin/git-askpass.exe
 SUBSYSTEM_LIST='
     dwt
     error_resilience
@@ -9961,14 +9980,13 @@ SYSTEM_LIBRARIES='
 '
 TEMP=/tmp
 TERM=xterm-256color
-TERM_PROGRAM=mintty
-TERM_PROGRAM_VERSION=3.8.1
 THREADS_LIST='
     pthreads
     os2threads
     w32threads
 '
 TMP=/tmp
+TMPDIR=/tmp
 TOOLCHAIN_FEATURES='
     as_arch_directive
     as_archext_dotprod_directive
@@ -10038,18 +10056,39 @@ TYPES_LIST='
     struct_v4l2_frmivalenum_discrete
     struct_mfxConfigInterface
 '
-TZ=America/New_York
+UCRTVersion=10.0.19041.0
 UID=197609
-USER=jacob
 USERDOMAIN=DESKTOP-I67T51D
 USERDOMAIN_ROAMINGPROFILE=DESKTOP-I67T51D
 USERNAME=jacob
 USERPROFILE='C:\Users\jacob'
+UniversalCRTSdkDir='C:\Program Files (x86)\Windows Kits\10\'
+VCIDEInstallDir='C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\VC\'
+VCINSTALLDIR='C:\Program Files\Microsoft Visual Studio\2022\Community\VC\'
+VCPKG_ROOT='C:\Program Files\Microsoft Visual Studio\2022\Community\VC\vcpkg'
+VCToolsInstallDir='C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\'
+VCToolsRedistDir='C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Redist\MSVC\14.44.35112\'
+VCToolsVersion=14.44.35207
 VERSION_SCRIPT_POSTPROCESS_CMD=cat
+VS170COMNTOOLS='C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\'
+VSCMD_ARG_HOST_ARCH=x64
+VSCMD_ARG_TGT_ARCH=x64
+VSCMD_ARG_app_plat=Desktop
+VSCMD_VER=17.14.16
+VSINSTALLDIR='C:\Program Files\Microsoft Visual Studio\2022\Community\'
+VisualStudioVersion=17.0
 WINDIR='C:\Windows'
+WindowsLibPath='C:\Program Files (x86)\Windows Kits\10\UnionMetadata\10.0.19041.0;C:\Program Files (x86)\Windows Kits\10\References\10.0.19041.0'
+WindowsSDKLibVersion='10.0.19041.0\'
+WindowsSDKVersion='10.0.19041.0\'
+WindowsSdkBinPath='C:\Program Files (x86)\Windows Kits\10\bin\'
+WindowsSdkDir='C:\Program Files (x86)\Windows Kits\10\'
+WindowsSdkVerBinPath='C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\'
 X86ASM_O='-o $@'
-XDG_DATA_DIRS=/mingw64/share/:/usr/local/share/:/usr/share/
-_='# ./configure --toolchain=msvc --enable-gpl --enable-nonfree --enable-cuda --enable-cuvid --enable-nvenc --enable-ffnvcodec --extra-cflags='\''-IC:/NVIDIA/nv-codec-headers/include -IC:/CUDA/v13.0/include'\'' --extra-ldflags='\''-LIBPATH:C:/NVIDIA/nv-codec-headers/Lib/x64 -LIBPATH:C:/CUDA/v13.0/lib/x64'\'''
+_='# ./configure --toolchain=msvc --enable-gpl --enable-nonfree --enable-cuda --enable-cuvid --enable-nvenc --enable-ffnvcodec --extra-cflags='\''-IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include'\'' --extra-ldflags='\''-LIBPATH:C:\NVIDIA\nv-codec-headers\Lib\x64 -LIBPATH:C:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\lib\x64'\'''
+__DOTNET_ADD_64BIT=1
+__DOTNET_PREFERRED_BITNESS=64
+__VSCMD_PREINIT_PATH='C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.0\bin\x64;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.0\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA App\NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\Git\cmd;C:\Program Files\NVIDIA Corporation\Nsight Compute 2025.3.1\;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.0\lib\x64;C:\Users\jacob\OneDrive\Documents\MMPEG\nv-codec-headers;C:\CUDA\v13.0\bin;C:\msys64\mingw64\bin;C:\Users\jacob\AppData\Local\Microsoft\WindowsApps'
 a3dscope_filter=yes
 a64_muxer=yes
 a64multi5_encoder=yes
@@ -12435,7 +12474,7 @@ exr_decoder_select=bswapdsp
 exr_encoder=yes
 exr_encoder_deps=zlib
 ext=xop
-extra_cflags=' -IC:/NVIDIA/nv-codec-headers/include -IC:/CUDA/v13.0/include'
+extra_cflags=' -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include'
 extract_extradata_bsf=yes
 extract_mvs_example=yes
 extract_mvs_example_deps='avcodec avformat avutil'
@@ -14776,7 +14815,7 @@ mxpeg_decoder_select=mjpeg_decoder
 n=protocols
 nc_demuxer=yes
 ncolors=256
-ncols=100
+ncols=120
 negate_filter=yes
 negate_filter_deps=lut_filter
 nellymoser_decoder=yes
@@ -14859,7 +14898,7 @@ opt=libxeve
 optimizations=yes
 option=ffnvcodec
 optname=extra_cflags
-optval='-LIBPATH:C:/NVIDIA/nv-codec-headers/Lib/x64 -LIBPATH:C:/CUDA/v13.0/lib/x64'
+optval='-LIBPATH:C:\NVIDIA\nv-codec-headers\Lib\x64 -LIBPATH:C:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\lib\x64'
 opus_decoder=yes
 opus_decoder_deps=swresample
 opus_encoder=yes
@@ -15295,7 +15334,7 @@ qtrle_decoder=yes
 qtrle_encoder=yes
 quirc_filter=yes
 quirc_filter_deps=libquirc
-r=''\''-LIBPATH:C:/NVIDIA/nv-codec-headers/Lib/x64 -LIBPATH:C:/CUDA/v13.0/lib/x64'\'''
+r=''\''-LIBPATH:C:\NVIDIA\nv-codec-headers\Lib\x64 -LIBPATH:C:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\lib\x64'\'''
 r10k_decoder=yes
 r10k_encoder=yes
 r210_decoder=yes
@@ -16377,33 +16416,706 @@ zoompan_filter_deps=swscale
 zscale_filter=yes
 zscale_filter_deps='libzimg const_nan'
 mktemp -u XXXXXX
-RM6fMx
-WARNING: Unknown C compiler cl.exe, unable to select optimal CFLAGS
+W4Y5wz
 test_cpp_condition windows.h _MSC_FULL_VER >= 193030705
 test_cpp
-BEGIN ./ffconf.Q0AJ8otN/test.c
+BEGIN ./ffconf.e0kkPsAP/test.c
     1	#include <windows.h>
     2	#if !(_MSC_FULL_VER >= 193030705)
     3	#error "unsatisfied condition: _MSC_FULL_VER >= 193030705"
     4	#endif
-END ./ffconf.Q0AJ8otN/test.c
-cl.exe -E -o ./ffconf.Q0AJ8otN/test.o ./ffconf.Q0AJ8otN/test.c
-./configure: line 1030: cl.exe: command not found
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -nologo -P -Fi./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+check_cflags -options:strict
+test_cflags -options:strict
+test_cc -options:strict
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	int x;
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -nologo -options:strict -c -Fo./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
 test_host_cpp_condition windows.h _MSC_FULL_VER >= 193030705
 test_host_cpp
-BEGIN ./ffconf.Q0AJ8otN/test.c
+BEGIN ./ffconf.e0kkPsAP/test.c
     1	#include <windows.h>
     2	#if !(_MSC_FULL_VER >= 193030705)
     3	#error "unsatisfied condition: _MSC_FULL_VER >= 193030705"
     4	#endif
-END ./ffconf.Q0AJ8otN/test.c
-cl.exe -E -o ./ffconf.Q0AJ8otN/test.o ./ffconf.Q0AJ8otN/test.c
-./configure: line 1030: cl.exe: command not found
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -nologo -P -Fi./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+check_host_cflags -options:strict
+test_host_cc -options:strict
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	int x;
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -nologo -options:strict -c -Fo./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
 test_ld cc
 test_cc
-BEGIN ./ffconf.Q0AJ8otN/test.c
+BEGIN ./ffconf.e0kkPsAP/test.c
     1	int main(void){ return 0; }
-END ./ffconf.Q0AJ8otN/test.c
-cl.exe -IC:/NVIDIA/nv-codec-headers/include -IC:/CUDA/v13.0/include -c -o ./ffconf.Q0AJ8otN/test.o ./ffconf.Q0AJ8otN/test.c
-./configure: line 1030: cl.exe: command not found
-C compiler test failed.
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -nologo -options:strict -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include -c -Fo./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+./compat/windows/mslink -LIBPATH:C:\NVIDIA\nv-codec-headers\Lib\x64 -LIBPATH:C:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\lib\x64 -nologo -out:./ffconf.e0kkPsAP/test.exe ./ffconf.e0kkPsAP/test.o
+check_cxxflags_cc -std=c++17 ctype.h __cplusplus >= 201103L
+test_cxxflags_cc -std=c++17 ctype.h __cplusplus >= 201103L
+test_cxx /std:c++17
+BEGIN ./ffconf.e0kkPsAP/test.cpp
+    1	#include <ctype.h>
+    2	#if !(__cplusplus >= 201103L)
+    3	#error "unsatisfied condition: __cplusplus >= 201103L"
+    4	#endif
+END ./ffconf.e0kkPsAP/test.cpp
+cl.exe -D_ISOC11_SOURCE -nologo -Zc:__cplusplus -EHsc -D__STDC_CONSTANT_MACROS /std:c++17 -c -Fo./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.cpp
+test.cpp
+test_cxxflags_cc -std=c++17 ctype.h __cplusplus >= 201703L
+test_cxx /std:c++17
+BEGIN ./ffconf.e0kkPsAP/test.cpp
+    1	#include <ctype.h>
+    2	#if !(__cplusplus >= 201703L)
+    3	#error "unsatisfied condition: __cplusplus >= 201703L"
+    4	#endif
+END ./ffconf.e0kkPsAP/test.cpp
+cl.exe -D_ISOC11_SOURCE -nologo -Zc:__cplusplus -EHsc -D__STDC_CONSTANT_MACROS /std:c++17 /std:c++17 -c -Fo./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.cpp
+test.cpp
+check_cflags_cc -std=c17 ctype.h __STDC_VERSION__ >= 201112L
+test_cflags_cc -std=c17 ctype.h __STDC_VERSION__ >= 201112L
+test_cc /std:c17
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	#include <ctype.h>
+    2	#if !(__STDC_VERSION__ >= 201112L)
+    3	#error "unsatisfied condition: __STDC_VERSION__ >= 201112L"
+    4	#endif
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -nologo -options:strict -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include /std:c17 -c -Fo./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+test_cc
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	#include <assert.h>
+    2	#include <stddef.h>
+    3	struct Foo {
+    4	    int a;
+    5	    void *ptr;
+    6	} obj;
+    7	static_assert(offsetof(struct Foo, a) == 0,
+    8	              "First element of struct does not have offset 0");
+    9	_Static_assert(offsetof(struct Foo, ptr) >= offsetof(struct Foo, a) + sizeof(obj.a),
+   10	               "elements not properly ordered in struct");
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -nologo -options:strict -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include /std:c17 -c -Fo./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+check_cppflags -D_FILE_OFFSET_BITS=64
+test_cpp -D_FILE_OFFSET_BITS=64
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	#include <stdlib.h>
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -nologo -options:strict -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include /std:c17 -D_FILE_OFFSET_BITS=64 -P -Fi./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+check_cppflags -D_LARGEFILE_SOURCE
+test_cpp -D_LARGEFILE_SOURCE
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	#include <stdlib.h>
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -D_FILE_OFFSET_BITS=64 -nologo -options:strict -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include /std:c17 -D_LARGEFILE_SOURCE -P -Fi./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+check_host_cflags_cc -std=c17 ctype.h __STDC_VERSION__ >= 201112L
+test_host_cflags_cc -std=c17 ctype.h __STDC_VERSION__ >= 201112L
+test_host_cc /std:c17
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	#include <ctype.h>
+    2	#if !(__STDC_VERSION__ >= 201112L)
+    3	#error "unsatisfied condition: __STDC_VERSION__ >= 201112L"
+    4	#endif
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -nologo -options:strict /std:c17 -c -Fo./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+check_host_cflags -Wall
+test_host_cc -W3 -wd4018 -wd4146 -wd4244 -wd4305 -wd4554 -wd4267
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	int x;
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -nologo -options:strict /std:c17 -W3 -wd4018 -wd4146 -wd4244 -wd4305 -wd4554 -wd4267 -c -Fo./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+check_host_cflags -O2
+test_host_cc -O2
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	int x;
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -nologo -options:strict /std:c17 -W3 -wd4018 -wd4146 -wd4244 -wd4305 -wd4554 -wd4267 -O2 -c -Fo./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+test_code cc  int test[2*(sizeof(void *) > 4) - 1]
+test_cc
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	int main(void) { int test[2*(sizeof(void *) > 4) - 1]; return 0; }
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -nologo -options:strict -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include /std:c17 -c -Fo./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+./compat/windows/mswindres --version
+
+Microsoft (R) Windows (R) Resource Compiler Version 10.0.10011.16384
+
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+
+Usage:  rc [options] .RC input file
+
+Switches:
+
+   /r       Emit .RES file (optional)
+
+   /v       Verbose (print progress messages)
+
+   /d       Define a symbol
+
+   /u       Undefine a symbol
+
+   /fo      Rename .RES file
+
+   /l       Specify default language using language identifier
+
+   /ln      Specify default language using language name
+
+   /i       Add a path for INCLUDE searches
+
+   /x       Ignore INCLUDE environment variable
+
+   /c       Define a code page used by NLS conversion
+
+   /w       Warn on Invalid codepage in .rc (default is an error)
+
+   /y       Don't warn if there are duplicate control ID's
+
+   /n       Append null's to all strings in the string tables
+
+   /fm      Localizable resource only dll file name
+
+   /q       RC Configuration file for the resource only DLL
+
+   /g       Specify the ultimate fallback language using language identifier
+
+   /gn      Specify the ultimate fallback language using language name
+
+   /g1      Specify if version only MUI file can be created
+
+   /g2      Specify the custom file version for checksum in MUI creation
+
+   /nologo  Suppress startup logo
+
+   /sl      Specify the resource string length limit in percentage
+
+Flags may be either upper or lower case
+
+
+
+test_cpp_condition features.h defined __UCLIBC__
+test_cpp
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	#include <features.h>
+    2	#if !(defined __UCLIBC__)
+    3	#error "unsatisfied condition: defined __UCLIBC__"
+    4	#endif
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DWIN32_LEAN_AND_MEAN -nologo -options:strict -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include /std:c17 -P -Fi./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+./ffconf.e0kkPsAP/test.c(1): fatal error C1083: Cannot open include file: 'features.h': No such file or directory
+test_cpp_condition features.h defined __GLIBC__
+test_cpp
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	#include <features.h>
+    2	#if !(defined __GLIBC__)
+    3	#error "unsatisfied condition: defined __GLIBC__"
+    4	#endif
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DWIN32_LEAN_AND_MEAN -nologo -options:strict -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include /std:c17 -P -Fi./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+./ffconf.e0kkPsAP/test.c(1): fatal error C1083: Cannot open include file: 'features.h': No such file or directory
+test_cpp_condition newlib.h defined _NEWLIB_VERSION
+test_cpp
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	#include <newlib.h>
+    2	#if !(defined _NEWLIB_VERSION)
+    3	#error "unsatisfied condition: defined _NEWLIB_VERSION"
+    4	#endif
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DWIN32_LEAN_AND_MEAN -nologo -options:strict -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include /std:c17 -P -Fi./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+./ffconf.e0kkPsAP/test.c(1): fatal error C1083: Cannot open include file: 'newlib.h': No such file or directory
+test_cpp_condition _mingw.h defined __MINGW64_VERSION_MAJOR
+test_cpp
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	#include <_mingw.h>
+    2	#if !(defined __MINGW64_VERSION_MAJOR)
+    3	#error "unsatisfied condition: defined __MINGW64_VERSION_MAJOR"
+    4	#endif
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DWIN32_LEAN_AND_MEAN -nologo -options:strict -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include /std:c17 -P -Fi./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+./ffconf.e0kkPsAP/test.c(1): fatal error C1083: Cannot open include file: '_mingw.h': No such file or directory
+test_cpp_condition _mingw.h defined __MINGW_VERSION
+test_cpp
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	#include <_mingw.h>
+    2	#if !(defined __MINGW_VERSION)
+    3	#error "unsatisfied condition: defined __MINGW_VERSION"
+    4	#endif
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DWIN32_LEAN_AND_MEAN -nologo -options:strict -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include /std:c17 -P -Fi./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+./ffconf.e0kkPsAP/test.c(1): fatal error C1083: Cannot open include file: '_mingw.h': No such file or directory
+test_cpp_condition _mingw.h defined __MINGW32_VERSION
+test_cpp
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	#include <_mingw.h>
+    2	#if !(defined __MINGW32_VERSION)
+    3	#error "unsatisfied condition: defined __MINGW32_VERSION"
+    4	#endif
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DWIN32_LEAN_AND_MEAN -nologo -options:strict -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include /std:c17 -P -Fi./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+./ffconf.e0kkPsAP/test.c(1): fatal error C1083: Cannot open include file: '_mingw.h': No such file or directory
+test_cpp_condition crtversion.h defined _VC_CRT_MAJOR_VERSION
+test_cpp
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	#include <crtversion.h>
+    2	#if !(defined _VC_CRT_MAJOR_VERSION)
+    3	#error "unsatisfied condition: defined _VC_CRT_MAJOR_VERSION"
+    4	#endif
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DWIN32_LEAN_AND_MEAN -nologo -options:strict -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include /std:c17 -P -Fi./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+test_cpp_condition crtversion.h _VC_CRT_MAJOR_VERSION < 14
+test_cpp
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	#include <crtversion.h>
+    2	#if !(_VC_CRT_MAJOR_VERSION < 14)
+    3	#error "unsatisfied condition: _VC_CRT_MAJOR_VERSION < 14"
+    4	#endif
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DWIN32_LEAN_AND_MEAN -nologo -options:strict -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include /std:c17 -P -Fi./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+./ffconf.e0kkPsAP/test.c(3): fatal error C1189: #error:  "unsatisfied condition: _VC_CRT_MAJOR_VERSION < 14"
+test_cpp_condition stdlib.h defined(_WIN32_WINNT)
+test_cpp
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	#include <stdlib.h>
+    2	#if !(defined(_WIN32_WINNT))
+    3	#error "unsatisfied condition: defined(_WIN32_WINNT)"
+    4	#endif
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DWIN32_LEAN_AND_MEAN -D_USE_MATH_DEFINES -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_WARNINGS -nologo -options:strict -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include /std:c17 -P -Fi./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+./ffconf.e0kkPsAP/test.c(3): fatal error C1189: #error:  "unsatisfied condition: defined(_WIN32_WINNT)"
+test_cpp
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	#ifdef WINAPI_FAMILY
+    2	#include <winapifamily.h>
+    3	#if !WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+    4	#error not desktop
+    5	#endif
+    6	#endif
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DWIN32_LEAN_AND_MEAN -D_USE_MATH_DEFINES -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_WARNINGS -nologo -options:strict -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include /std:c17 -P -Fi./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+check_func strtoll
+test_ld cc
+test_cc
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	extern int strtoll();
+    2	int main(void){ strtoll(); }
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DWIN32_LEAN_AND_MEAN -D_USE_MATH_DEFINES -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_WARNINGS -D_WIN32_WINNT=0x0600 -nologo -options:strict -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include /std:c17 -c -Fo./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+./compat/windows/mslink -LIBPATH:C:\NVIDIA\nv-codec-headers\Lib\x64 -LIBPATH:C:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\lib\x64 -nologo -out:./ffconf.e0kkPsAP/test.exe ./ffconf.e0kkPsAP/test.o
+check_func strtoull
+test_ld cc
+test_cc
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	extern int strtoull();
+    2	int main(void){ strtoull(); }
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DWIN32_LEAN_AND_MEAN -D_USE_MATH_DEFINES -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_WARNINGS -D_WIN32_WINNT=0x0600 -nologo -options:strict -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include /std:c17 -c -Fo./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+./compat/windows/mslink -LIBPATH:C:\NVIDIA\nv-codec-headers\Lib\x64 -LIBPATH:C:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\lib\x64 -nologo -out:./ffconf.e0kkPsAP/test.exe ./ffconf.e0kkPsAP/test.o
+test_cc
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	#include <time.h>
+    2	void *v = localtime_r;
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DWIN32_LEAN_AND_MEAN -D_USE_MATH_DEFINES -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_WARNINGS -D_WIN32_WINNT=0x0600 -nologo -options:strict -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include /std:c17 -c -Fo./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+./ffconf.e0kkPsAP/test.c(2): error C2065: 'localtime_r': undeclared identifier
+./ffconf.e0kkPsAP/test.c(2): error C2099: initializer is not a constant
+test_cc -D_POSIX_C_SOURCE=200112 -D_XOPEN_SOURCE=600
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	#include <time.h>
+    2	void *v = localtime_r;
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DWIN32_LEAN_AND_MEAN -D_USE_MATH_DEFINES -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_WARNINGS -D_WIN32_WINNT=0x0600 -nologo -options:strict -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include /std:c17 -D_POSIX_C_SOURCE=200112 -D_XOPEN_SOURCE=600 -c -Fo./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+./ffconf.e0kkPsAP/test.c(2): error C2065: 'localtime_r': undeclared identifier
+./ffconf.e0kkPsAP/test.c(2): error C2099: initializer is not a constant
+test_host_cpp_condition features.h defined __UCLIBC__
+test_host_cpp
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	#include <features.h>
+    2	#if !(defined __UCLIBC__)
+    3	#error "unsatisfied condition: defined __UCLIBC__"
+    4	#endif
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -nologo -options:strict /std:c17 -W3 -wd4018 -wd4146 -wd4244 -wd4305 -wd4554 -wd4267 -O2 -P -Fi./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+./ffconf.e0kkPsAP/test.c(1): fatal error C1083: Cannot open include file: 'features.h': No such file or directory
+test_host_cpp_condition features.h defined __GLIBC__
+test_host_cpp
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	#include <features.h>
+    2	#if !(defined __GLIBC__)
+    3	#error "unsatisfied condition: defined __GLIBC__"
+    4	#endif
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -nologo -options:strict /std:c17 -W3 -wd4018 -wd4146 -wd4244 -wd4305 -wd4554 -wd4267 -O2 -P -Fi./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+./ffconf.e0kkPsAP/test.c(1): fatal error C1083: Cannot open include file: 'features.h': No such file or directory
+test_host_cpp_condition newlib.h defined _NEWLIB_VERSION
+test_host_cpp
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	#include <newlib.h>
+    2	#if !(defined _NEWLIB_VERSION)
+    3	#error "unsatisfied condition: defined _NEWLIB_VERSION"
+    4	#endif
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -nologo -options:strict /std:c17 -W3 -wd4018 -wd4146 -wd4244 -wd4305 -wd4554 -wd4267 -O2 -P -Fi./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+./ffconf.e0kkPsAP/test.c(1): fatal error C1083: Cannot open include file: 'newlib.h': No such file or directory
+test_host_cpp_condition _mingw.h defined __MINGW64_VERSION_MAJOR
+test_host_cpp
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	#include <_mingw.h>
+    2	#if !(defined __MINGW64_VERSION_MAJOR)
+    3	#error "unsatisfied condition: defined __MINGW64_VERSION_MAJOR"
+    4	#endif
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -nologo -options:strict /std:c17 -W3 -wd4018 -wd4146 -wd4244 -wd4305 -wd4554 -wd4267 -O2 -P -Fi./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+./ffconf.e0kkPsAP/test.c(1): fatal error C1083: Cannot open include file: '_mingw.h': No such file or directory
+test_host_cpp_condition _mingw.h defined __MINGW_VERSION
+test_host_cpp
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	#include <_mingw.h>
+    2	#if !(defined __MINGW_VERSION)
+    3	#error "unsatisfied condition: defined __MINGW_VERSION"
+    4	#endif
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -nologo -options:strict /std:c17 -W3 -wd4018 -wd4146 -wd4244 -wd4305 -wd4554 -wd4267 -O2 -P -Fi./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+./ffconf.e0kkPsAP/test.c(1): fatal error C1083: Cannot open include file: '_mingw.h': No such file or directory
+test_host_cpp_condition _mingw.h defined __MINGW32_VERSION
+test_host_cpp
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	#include <_mingw.h>
+    2	#if !(defined __MINGW32_VERSION)
+    3	#error "unsatisfied condition: defined __MINGW32_VERSION"
+    4	#endif
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -nologo -options:strict /std:c17 -W3 -wd4018 -wd4146 -wd4244 -wd4305 -wd4554 -wd4267 -O2 -P -Fi./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+./ffconf.e0kkPsAP/test.c(1): fatal error C1083: Cannot open include file: '_mingw.h': No such file or directory
+test_host_cpp_condition crtversion.h defined _VC_CRT_MAJOR_VERSION
+test_host_cpp
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	#include <crtversion.h>
+    2	#if !(defined _VC_CRT_MAJOR_VERSION)
+    3	#error "unsatisfied condition: defined _VC_CRT_MAJOR_VERSION"
+    4	#endif
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -nologo -options:strict /std:c17 -W3 -wd4018 -wd4146 -wd4244 -wd4305 -wd4554 -wd4267 -O2 -P -Fi./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+test_host_cpp_condition crtversion.h _VC_CRT_MAJOR_VERSION < 14
+test_host_cpp
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	#include <crtversion.h>
+    2	#if !(_VC_CRT_MAJOR_VERSION < 14)
+    3	#error "unsatisfied condition: _VC_CRT_MAJOR_VERSION < 14"
+    4	#endif
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -nologo -options:strict /std:c17 -W3 -wd4018 -wd4146 -wd4244 -wd4305 -wd4554 -wd4267 -O2 -P -Fi./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+./ffconf.e0kkPsAP/test.c(3): fatal error C1189: #error:  "unsatisfied condition: _VC_CRT_MAJOR_VERSION < 14"
+test_host_cpp_condition stdlib.h defined(_WIN32_WINNT)
+test_host_cpp
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	#include <stdlib.h>
+    2	#if !(defined(_WIN32_WINNT))
+    3	#error "unsatisfied condition: defined(_WIN32_WINNT)"
+    4	#endif
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -D_USE_MATH_DEFINES -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_WARNINGS -nologo -options:strict /std:c17 -W3 -wd4018 -wd4146 -wd4244 -wd4305 -wd4554 -wd4267 -O2 -P -Fi./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+./ffconf.e0kkPsAP/test.c(3): fatal error C1189: #error:  "unsatisfied condition: defined(_WIN32_WINNT)"
+test_host_cpp
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	#ifdef WINAPI_FAMILY
+    2	#include <winapifamily.h>
+    3	#if !WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+    4	#error not desktop
+    5	#endif
+    6	#endif
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -D_USE_MATH_DEFINES -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_WARNINGS -nologo -options:strict /std:c17 -W3 -wd4018 -wd4146 -wd4244 -wd4305 -wd4554 -wd4267 -O2 -P -Fi./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+test_host_cc
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	#include <time.h>
+    2	void *v = localtime_r;
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -nologo -options:strict /std:c17 -W3 -wd4018 -wd4146 -wd4244 -wd4305 -wd4554 -wd4267 -O2 -c -Fo./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+./ffconf.e0kkPsAP/test.c(2): error C2065: 'localtime_r': undeclared identifier
+./ffconf.e0kkPsAP/test.c(2): error C2099: initializer is not a constant
+test_host_cc -D_POSIX_C_SOURCE=200112 -D_XOPEN_SOURCE=600
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	#include <time.h>
+    2	void *v = localtime_r;
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -nologo -options:strict /std:c17 -W3 -wd4018 -wd4146 -wd4244 -wd4305 -wd4554 -wd4267 -O2 -D_POSIX_C_SOURCE=200112 -D_XOPEN_SOURCE=600 -c -Fo./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+./ffconf.e0kkPsAP/test.c(2): error C2065: 'localtime_r': undeclared identifier
+./ffconf.e0kkPsAP/test.c(2): error C2099: initializer is not a constant
+check_compile_assert flt_lim float.h limits.h DBL_MAX == (double)DBL_MAX
+test_code cc float.h limits.h char c[2 * !!(DBL_MAX == (double)DBL_MAX) - 1]
+test_cc
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	#include <float.h>
+    2	#include <limits.h>
+    3	int main(void) { char c[2 * !!(DBL_MAX == (double)DBL_MAX) - 1]; return 0; }
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DWIN32_LEAN_AND_MEAN -D_USE_MATH_DEFINES -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_WARNINGS -D_WIN32_WINNT=0x0600 -nologo -options:strict -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include /std:c17 -c -Fo./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+test_cpp_condition stdlib.h defined(__PIC__) || defined(__pic__) || defined(PIC)
+test_cpp
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	#include <stdlib.h>
+    2	#if !(defined(__PIC__) || defined(__pic__) || defined(PIC))
+    3	#error "unsatisfied condition: defined(__PIC__) || defined(__pic__) || defined(PIC)"
+    4	#endif
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DWIN32_LEAN_AND_MEAN -D_USE_MATH_DEFINES -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_WARNINGS -D_WIN32_WINNT=0x0600 -nologo -options:strict -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include /std:c17 -P -Fi./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+./ffconf.e0kkPsAP/test.c(3): fatal error C1189: #error:  "unsatisfied condition: defined(__PIC__) || defined(__pic__) || defined(PIC)"
+check_cflags -fomit-frame-pointer
+test_cflags -fomit-frame-pointer
+test_cc
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	int x;
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DWIN32_LEAN_AND_MEAN -D_USE_MATH_DEFINES -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_WARNINGS -D_WIN32_WINNT=0x0600 -nologo -options:strict -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include /std:c17 -c -Fo./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+check_cxxflags -fomit-frame-pointer
+test_cxxflags -fomit-frame-pointer
+test_cxx
+BEGIN ./ffconf.e0kkPsAP/test.cpp
+    1	int x;
+END ./ffconf.e0kkPsAP/test.cpp
+cl.exe -D_ISOC11_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DWIN32_LEAN_AND_MEAN -D_USE_MATH_DEFINES -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_WARNINGS -D_WIN32_WINNT=0x0600 -nologo -Zc:__cplusplus -EHsc -D__STDC_CONSTANT_MACROS /std:c++17 -c -Fo./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.cpp
+test.cpp
+check_objcflags -fomit-frame-pointer
+test_objcflags -fomit-frame-pointer
+test_objcc
+BEGIN ./ffconf.e0kkPsAP/test.m
+    1	int x;
+END ./ffconf.e0kkPsAP/test.m
+cl.exe -Werror=missing-prototypes -D_ISOC11_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DWIN32_LEAN_AND_MEAN -D_USE_MATH_DEFINES -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_WARNINGS -D_WIN32_WINNT=0x0600 -nologo -options:strict -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include /std:c17 -nologo -c -Fo./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.m
+cl : Command line error D8021 : invalid numeric argument '/Werror=missing-prototypes'
+test_cc
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	int ff_extern;
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DWIN32_LEAN_AND_MEAN -D_USE_MATH_DEFINES -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_WARNINGS -D_WIN32_WINNT=0x0600 -nologo -options:strict -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include /std:c17 -c -Fo./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+Symbol prefix detected as: ''
+check_inline_asm inline_asm "" ::
+test_cc
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	void foo(void){ __asm__ volatile("" ::); }
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DWIN32_LEAN_AND_MEAN -D_USE_MATH_DEFINES -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_WARNINGS -D_WIN32_WINNT=0x0600 -nologo -options:strict -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include /std:c17 -c -Fo./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+./ffconf.e0kkPsAP/test.c(1): error C2065: '__asm__': undeclared identifier
+./ffconf.e0kkPsAP/test.c(1): error C2143: syntax error: missing ';' before 'volatile'
+check_cc pragma_deprecated  _Pragma("GCC diagnostic push") _Pragma("GCC diagnostic ignored \"-Wdeprecated-declarations\"")
+test_code cc  _Pragma("GCC diagnostic push") _Pragma("GCC diagnostic ignored \"-Wdeprecated-declarations\"")
+test_cc
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	int main(void) { _Pragma("GCC diagnostic push") _Pragma("GCC diagnostic ignored \"-Wdeprecated-declarations\""); return 0; }
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DWIN32_LEAN_AND_MEAN -D_USE_MATH_DEFINES -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_WARNINGS -D_WIN32_WINNT=0x0600 -nologo -options:strict -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include /std:c17 -c -Fo./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+./ffconf.e0kkPsAP/test.c(1): warning C4068: unknown pragma 'GCC'
+./ffconf.e0kkPsAP/test.c(1): warning C4068: unknown pragma 'GCC'
+test_cpp_condition stdlib.h defined(__BYTE_ORDER__) && (__BYTE_ORDER__ == __ORDER_BIG_ENDIAN__)
+test_cpp
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	#include <stdlib.h>
+    2	#if !(defined(__BYTE_ORDER__) && (__BYTE_ORDER__ == __ORDER_BIG_ENDIAN__))
+    3	#error "unsatisfied condition: defined(__BYTE_ORDER__) && (__BYTE_ORDER__ == __ORDER_BIG_ENDIAN__)"
+    4	#endif
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DWIN32_LEAN_AND_MEAN -D_USE_MATH_DEFINES -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_WARNINGS -D_WIN32_WINNT=0x0600 -nologo -options:strict -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include /std:c17 -P -Fi./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+./ffconf.e0kkPsAP/test.c(3): fatal error C1189: #error:  "unsatisfied condition: defined(__BYTE_ORDER__) && (__BYTE_ORDER__ == __ORDER_BIG_ENDIAN__)"
+check_cc const_nan math.h struct { double d; } static const bar[] = { { NAN } }
+test_code cc math.h struct { double d; } static const bar[] = { { NAN } }
+test_cc
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	#include <math.h>
+    2	int main(void) { struct { double d; } static const bar[] = { { NAN } }; return 0; }
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DWIN32_LEAN_AND_MEAN -D_USE_MATH_DEFINES -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_WARNINGS -D_WIN32_WINNT=0x0600 -nologo -options:strict -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include /std:c17 -c -Fo./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+check_inline_asm inline_asm_labels "1:\n"
+test_cc
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	void foo(void){ __asm__ volatile("1:\n"); }
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DWIN32_LEAN_AND_MEAN -D_USE_MATH_DEFINES -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_WARNINGS -D_WIN32_WINNT=0x0600 -nologo -options:strict -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include /std:c17 -c -Fo./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+./ffconf.e0kkPsAP/test.c(1): error C2065: '__asm__': undeclared identifier
+./ffconf.e0kkPsAP/test.c(1): error C2143: syntax error: missing ';' before 'volatile'
+check_inline_asm inline_asm_nonlocal_labels "Label:\n"
+test_cc
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	void foo(void){ __asm__ volatile("Label:\n"); }
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DWIN32_LEAN_AND_MEAN -D_USE_MATH_DEFINES -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_WARNINGS -D_WIN32_WINNT=0x0600 -nologo -options:strict -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include /std:c17 -c -Fo./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+./ffconf.e0kkPsAP/test.c(1): error C2065: '__asm__': undeclared identifier
+./ffconf.e0kkPsAP/test.c(1): error C2143: syntax error: missing ';' before 'volatile'
+check_builtin rdtsc intrin.h __rdtsc()
+test_code ld intrin.h __rdtsc() cc
+test_ld cc
+test_cc
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	#include <intrin.h>
+    2	int main(void) { __rdtsc(); return 0; }
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DWIN32_LEAN_AND_MEAN -D_USE_MATH_DEFINES -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_WARNINGS -D_WIN32_WINNT=0x0600 -nologo -options:strict -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include /std:c17 -c -Fo./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+./compat/windows/mslink -LIBPATH:C:\NVIDIA\nv-codec-headers\Lib\x64 -LIBPATH:C:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\lib\x64 -nologo -out:./ffconf.e0kkPsAP/test.exe ./ffconf.e0kkPsAP/test.o
+check_builtin mm_empty mmintrin.h _mm_empty()
+test_code ld mmintrin.h _mm_empty() cc
+test_ld cc
+test_cc
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	#include <mmintrin.h>
+    2	int main(void) { _mm_empty(); return 0; }
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DWIN32_LEAN_AND_MEAN -D_USE_MATH_DEFINES -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_WARNINGS -D_WIN32_WINNT=0x0600 -nologo -options:strict -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include /std:c17 -c -Fo./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+./compat/windows/mslink -LIBPATH:C:\NVIDIA\nv-codec-headers\Lib\x64 -LIBPATH:C:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\lib\x64 -nologo -out:./ffconf.e0kkPsAP/test.exe ./ffconf.e0kkPsAP/test.o
+test.o : error LNK2019: unresolved external symbol _mm_empty referenced in function main
+.\ffconf.e0kkPsAP\test.exe : fatal error LNK1120: 1 unresolved externals
+check_exec_crash
+test_ld cc
+test_cc
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	#include <signal.h>
+    2	static void sighandler(int sig){
+    3	    raise(SIGTERM);
+    4	}
+    5	int foo(void){
+    6	    volatile int i=0;
+    7	__asm__ volatile ("xorl %%ebp, %%ebp" ::: "%ebp");
+    8	return i;
+    9	}
+   10	int (*func_ptr)(void) = foo;
+   11	int main(void){
+   12	    signal(SIGILL, sighandler);
+   13	    signal(SIGFPE, sighandler);
+   14	    signal(SIGSEGV, sighandler);
+   15	#ifdef SIGBUS
+   16	    signal(SIGBUS, sighandler);
+   17	#endif
+   18	    return func_ptr();
+   19	}
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DWIN32_LEAN_AND_MEAN -D_USE_MATH_DEFINES -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_WARNINGS -D_WIN32_WINNT=0x0600 -nologo -options:strict -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include /std:c17 -c -Fo./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+./ffconf.e0kkPsAP/test.c(7): error C2065: '__asm__': undeclared identifier
+./ffconf.e0kkPsAP/test.c(7): error C2143: syntax error: missing ';' before 'volatile'
+check_inline_asm ebx_available ""::"b"(0)
+test_cc
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	void foo(void){ __asm__ volatile(""::"b"(0)); }
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DWIN32_LEAN_AND_MEAN -D_USE_MATH_DEFINES -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_WARNINGS -D_WIN32_WINNT=0x0600 -nologo -options:strict -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include /std:c17 -c -Fo./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+./ffconf.e0kkPsAP/test.c(1): error C2065: '__asm__': undeclared identifier
+./ffconf.e0kkPsAP/test.c(1): error C2143: syntax error: missing ';' before 'volatile'
+check_inline_asm xmm_clobbers "":::"%xmm0"
+test_cc
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	void foo(void){ __asm__ volatile("":::"%xmm0"); }
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DWIN32_LEAN_AND_MEAN -D_USE_MATH_DEFINES -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_WARNINGS -D_WIN32_WINNT=0x0600 -nologo -options:strict -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include /std:c17 -c -Fo./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+./ffconf.e0kkPsAP/test.c(1): error C2065: '__asm__': undeclared identifier
+./ffconf.e0kkPsAP/test.c(1): error C2143: syntax error: missing ';' before 'volatile'
+check_inline_asm inline_asm_direct_symbol_refs "movl test, %eax"
+test_cc
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	void foo(void){ __asm__ volatile("movl test, %eax"); }
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DWIN32_LEAN_AND_MEAN -D_USE_MATH_DEFINES -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_WARNINGS -D_WIN32_WINNT=0x0600 -nologo -options:strict -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include /std:c17 -c -Fo./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+./ffconf.e0kkPsAP/test.c(1): error C2065: '__asm__': undeclared identifier
+./ffconf.e0kkPsAP/test.c(1): error C2143: syntax error: missing ';' before 'volatile'
+check_inline_asm inline_asm_direct_symbol_refs "movl test(%rip), %eax"
+test_cc
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	void foo(void){ __asm__ volatile("movl test(%rip), %eax"); }
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DWIN32_LEAN_AND_MEAN -D_USE_MATH_DEFINES -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_WARNINGS -D_WIN32_WINNT=0x0600 -nologo -options:strict -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include /std:c17 -c -Fo./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+./ffconf.e0kkPsAP/test.c(1): error C2065: '__asm__': undeclared identifier
+./ffconf.e0kkPsAP/test.c(1): error C2143: syntax error: missing ';' before 'volatile'
+check_inline_asm ssse3_inline "pabsw %xmm0, %xmm0"
+test_cc
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	void foo(void){ __asm__ volatile("pabsw %xmm0, %xmm0"); }
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DWIN32_LEAN_AND_MEAN -D_USE_MATH_DEFINES -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_WARNINGS -D_WIN32_WINNT=0x0600 -nologo -options:strict -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include /std:c17 -c -Fo./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+./ffconf.e0kkPsAP/test.c(1): error C2065: '__asm__': undeclared identifier
+./ffconf.e0kkPsAP/test.c(1): error C2143: syntax error: missing ';' before 'volatile'
+check_inline_asm mmxext_inline "pmaxub %mm0, %mm1"
+test_cc
+BEGIN ./ffconf.e0kkPsAP/test.c
+    1	void foo(void){ __asm__ volatile("pmaxub %mm0, %mm1"); }
+END ./ffconf.e0kkPsAP/test.c
+cl.exe -D_ISOC11_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DWIN32_LEAN_AND_MEAN -D_USE_MATH_DEFINES -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_WARNINGS -D_WIN32_WINNT=0x0600 -nologo -options:strict -IC:\NVIDIA\nv-codec-headers\include -IC:\NVIDIA\NVIDIA-GPU-Computing-Toolkit\CUDA\v13.0\include /std:c17 -c -Fo./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.c
+test.c
+./ffconf.e0kkPsAP/test.c(1): error C2065: '__asm__': undeclared identifier
+./ffconf.e0kkPsAP/test.c(1): error C2143: syntax error: missing ';' before 'volatile'
+nasm -v
+./configure: line 1030: nasm: command not found
+check_x86asm x86asm movbe ecx, [5]
+test_x86asm movbe ecx, [5]
+BEGIN ./ffconf.e0kkPsAP/test.asm
+    1	movbe ecx, [5]
+END ./ffconf.e0kkPsAP/test.asm
+nasm -Werror -o ./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.asm
+./configure: line 1030: nasm: command not found
+nasm -v
+./configure: line 1030: nasm: command not found
+check_x86asm x86asm movbe ecx, [5]
+test_x86asm movbe ecx, [5]
+BEGIN ./ffconf.e0kkPsAP/test.asm
+    1	movbe ecx, [5]
+END ./ffconf.e0kkPsAP/test.asm
+nasm -Werror -o ./ffconf.e0kkPsAP/test.o ./ffconf.e0kkPsAP/test.asm
+./configure: line 1030: nasm: command not found
+nasm not found or too old. Please install/update nasm or use --disable-x86asm for a build without hand-optimized assembly.
