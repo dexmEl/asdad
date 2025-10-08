@@ -1,4 +1,4 @@
-# ./configure --prefix=/mingw64 --enable-gpl --enable-nonfree --enable-nvenc --enable-cuda --enable-cuvid --enable-ffnvcodec --extra-cflags='-IC:/NVIDIA/nv-codec-headers/include -IC:/CUDA/v13.0/include' --extra-ldflags='-LC:/CUDA/v13.0/lib/x64' --toolchain=msvc --arch=x86_64 --target-os=win32
+# ./configure --toolchain=msvc --enable-gpl --enable-nonfree --enable-cuda --enable-cuvid --enable-nvenc --enable-ffnvcodec --extra-cflags='-IC:/NVIDIA/nv-codec-headers/include -IC:/NVIDIA/NVIDIA-GPU-Computing-Toolkit/CUDA/v13.0/include' --extra-ldflags='-LIBPATH:C:/NVIDIA/nv-codec-headers/Lib/x64 -LIBPATH:C:/NVIDIA/NVIDIA-GPU-Computing-Toolkit/CUDA/v13.0/lib/x64'
 ACLOCAL_PATH=/mingw64/share/aclocal:/usr/share/aclocal
 ALLUSERSPROFILE='C:\ProgramData'
 ALL_COMPONENTS='
@@ -8184,7 +8184,7 @@ FEATURE_LIST='
     swscale_alpha
     unstable
 '
-FFMPEG_CONFIGURATION='--prefix=/mingw64 --enable-gpl --enable-nonfree --enable-nvenc --enable-cuda --enable-cuvid --enable-ffnvcodec --extra-cflags='\''-IC:/NVIDIA/nv-codec-headers/include -IC:/CUDA/v13.0/include'\'' --extra-ldflags='\''-LC:/CUDA/v13.0/lib/x64'\'' --toolchain=msvc --arch=x86_64 --target-os=win32'
+FFMPEG_CONFIGURATION='--toolchain=msvc --enable-gpl --enable-nonfree --enable-cuda --enable-cuvid --enable-nvenc --enable-ffnvcodec --extra-cflags='\''-IC:/NVIDIA/nv-codec-headers/include -IC:/NVIDIA/NVIDIA-GPU-Computing-Toolkit/CUDA/v13.0/include'\'' --extra-ldflags='\''-LIBPATH:C:/NVIDIA/nv-codec-headers/Lib/x64 -LIBPATH:C:/NVIDIA/NVIDIA-GPU-Computing-Toolkit/CUDA/v13.0/lib/x64'\'''
 FILTER_LIST='aap_filter
 abench_filter
 acompressor_filter
@@ -9425,7 +9425,7 @@ INTRINSICS_LIST='
 '
 LC_ALL=C
 LC_CTYPE=en_US.UTF-8
-LDFLAGS=' -LC:/CUDA/v13.0/lib/x64'
+LDFLAGS=' -LIBPATH:C:/NVIDIA/nv-codec-headers/Lib/x64 -LIBPATH:C:/NVIDIA/NVIDIA-GPU-Computing-Toolkit/CUDA/v13.0/lib/x64'
 LD_LIB=-l%
 LD_O='-o $@'
 LD_PATH=-L
@@ -9681,7 +9681,7 @@ NVCC_O='-o $@'
 OBJCC_C=-c
 OBJCC_E='-E -o $@'
 OBJCC_O='-o $@'
-OLDPWD=/c/NVIDIA/nv-codec-headers
+OLDPWD=/home/jacob
 OPTERR=1
 OPTIND=1
 ORIGINAL_PATH=/c/Windows/System32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0/
@@ -9784,7 +9784,7 @@ PKG_CONFIG_PATH=/mingw64/lib/pkgconfig:/mingw64/share/pkgconfig
 PKG_CONFIG_SYSTEM_INCLUDE_PATH=/mingw64/include
 PKG_CONFIG_SYSTEM_LIBRARY_PATH=/mingw64/lib
 POSIXLY_CORRECT=y
-PPID=1427
+PPID=1455
 PRINTER='HP ENVY 7640 series [E236E4]'
 PROCESSOR_ARCHITECTURE=AMD64
 PROCESSOR_IDENTIFIER='AMD64 Family 25 Model 33 Stepping 2, AuthenticAMD'
@@ -10049,7 +10049,7 @@ VERSION_SCRIPT_POSTPROCESS_CMD=cat
 WINDIR='C:\Windows'
 X86ASM_O='-o $@'
 XDG_DATA_DIRS=/mingw64/share/:/usr/local/share/:/usr/share/
-_='# ./configure --prefix=/mingw64 --enable-gpl --enable-nonfree --enable-nvenc --enable-cuda --enable-cuvid --enable-ffnvcodec --extra-cflags='\''-IC:/NVIDIA/nv-codec-headers/include -IC:/CUDA/v13.0/include'\'' --extra-ldflags='\''-LC:/CUDA/v13.0/lib/x64'\'' --toolchain=msvc --arch=x86_64 --target-os=win32'
+_='# ./configure --toolchain=msvc --enable-gpl --enable-nonfree --enable-cuda --enable-cuvid --enable-nvenc --enable-ffnvcodec --extra-cflags='\''-IC:/NVIDIA/nv-codec-headers/include -IC:/NVIDIA/NVIDIA-GPU-Computing-Toolkit/CUDA/v13.0/include'\'' --extra-ldflags='\''-LIBPATH:C:/NVIDIA/nv-codec-headers/Lib/x64 -LIBPATH:C:/NVIDIA/NVIDIA-GPU-Computing-Toolkit/CUDA/v13.0/lib/x64'\'''
 a3dscope_filter=yes
 a64_muxer=yes
 a64multi5_encoder=yes
@@ -10405,7 +10405,6 @@ apv_parser_select=cbs_apv
 aqtitle_demuxer=yes
 ar_default=ar
 arbc_decoder=yes
-arch=x86_64
 arch_default=x86_64
 arealtime_filter=yes
 aresample_filter=yes
@@ -12436,7 +12435,7 @@ exr_decoder_select=bswapdsp
 exr_encoder=yes
 exr_encoder_deps=zlib
 ext=xop
-extra_cflags=' -IC:/NVIDIA/nv-codec-headers/include -IC:/CUDA/v13.0/include'
+extra_cflags=' -IC:/NVIDIA/nv-codec-headers/include -IC:/NVIDIA/NVIDIA-GPU-Computing-Toolkit/CUDA/v13.0/include'
 extract_extradata_bsf=yes
 extract_mvs_example=yes
 extract_mvs_example_deps='avcodec avformat avutil'
@@ -13820,7 +13819,7 @@ kmvc_decoder=yes
 kux_demuxer=yes
 kvag_demuxer=yes
 kvag_muxer=yes
-l=--target-os=
+l=--extra-ldflags=
 ladspa=no
 ladspa_filter=yes
 ladspa_filter_deps='ladspa libdl'
@@ -14859,8 +14858,8 @@ openssl=no
 opt=libxeve
 optimizations=yes
 option=ffnvcodec
-optname=target_os
-optval=win32
+optname=extra_cflags
+optval='-LIBPATH:C:/NVIDIA/nv-codec-headers/Lib/x64 -LIBPATH:C:/NVIDIA/NVIDIA-GPU-Computing-Toolkit/CUDA/v13.0/lib/x64'
 opus_decoder=yes
 opus_decoder_deps=swresample
 opus_encoder=yes
@@ -15159,7 +15158,6 @@ ppc4xx=yes
 ppc4xx_deps=ppc
 ppm_decoder=yes
 ppm_encoder=yes
-prefix=/mingw64
 prefix_default=/usr/local
 premultiply_dynamic_filter=yes
 premultiply_filter=yes
@@ -15297,7 +15295,7 @@ qtrle_decoder=yes
 qtrle_encoder=yes
 quirc_filter=yes
 quirc_filter_deps=libquirc
-r=win32
+r=''\''-LIBPATH:C:/NVIDIA/nv-codec-headers/Lib/x64 -LIBPATH:C:/NVIDIA/NVIDIA-GPU-Computing-Toolkit/CUDA/v13.0/lib/x64'\'''
 r10k_decoder=yes
 r10k_encoder=yes
 r210_decoder=yes
@@ -15761,7 +15759,6 @@ tak_parser=yes
 targa_decoder=yes
 targa_encoder=yes
 targa_y216_decoder=yes
-target_os=win32
 target_os_default=mingw64_nt-10.0-19045
 target_path='$(CURDIR)'
 tblend_filter=yes
@@ -16380,33 +16377,33 @@ zoompan_filter_deps=swscale
 zscale_filter=yes
 zscale_filter_deps='libzimg const_nan'
 mktemp -u XXXXXX
-1h7q79
+0OvZii
 WARNING: Unknown C compiler cl.exe, unable to select optimal CFLAGS
 test_cpp_condition windows.h _MSC_FULL_VER >= 193030705
 test_cpp
-BEGIN ./ffconf.GfmxU7dk/test.c
+BEGIN ./ffconf.E8L3M5v3/test.c
     1	#include <windows.h>
     2	#if !(_MSC_FULL_VER >= 193030705)
     3	#error "unsatisfied condition: _MSC_FULL_VER >= 193030705"
     4	#endif
-END ./ffconf.GfmxU7dk/test.c
-cl.exe -E -o ./ffconf.GfmxU7dk/test.o ./ffconf.GfmxU7dk/test.c
+END ./ffconf.E8L3M5v3/test.c
+cl.exe -E -o ./ffconf.E8L3M5v3/test.o ./ffconf.E8L3M5v3/test.c
 ./configure: line 1030: cl.exe: command not found
 test_host_cpp_condition windows.h _MSC_FULL_VER >= 193030705
 test_host_cpp
-BEGIN ./ffconf.GfmxU7dk/test.c
+BEGIN ./ffconf.E8L3M5v3/test.c
     1	#include <windows.h>
     2	#if !(_MSC_FULL_VER >= 193030705)
     3	#error "unsatisfied condition: _MSC_FULL_VER >= 193030705"
     4	#endif
-END ./ffconf.GfmxU7dk/test.c
-cl.exe -E -o ./ffconf.GfmxU7dk/test.o ./ffconf.GfmxU7dk/test.c
+END ./ffconf.E8L3M5v3/test.c
+cl.exe -E -o ./ffconf.E8L3M5v3/test.o ./ffconf.E8L3M5v3/test.c
 ./configure: line 1030: cl.exe: command not found
 test_ld cc
 test_cc
-BEGIN ./ffconf.GfmxU7dk/test.c
+BEGIN ./ffconf.E8L3M5v3/test.c
     1	int main(void){ return 0; }
-END ./ffconf.GfmxU7dk/test.c
-cl.exe -IC:/NVIDIA/nv-codec-headers/include -IC:/CUDA/v13.0/include -c -o ./ffconf.GfmxU7dk/test.o ./ffconf.GfmxU7dk/test.c
+END ./ffconf.E8L3M5v3/test.c
+cl.exe -IC:/NVIDIA/nv-codec-headers/include -IC:/NVIDIA/NVIDIA-GPU-Computing-Toolkit/CUDA/v13.0/include -c -o ./ffconf.E8L3M5v3/test.o ./ffconf.E8L3M5v3/test.c
 ./configure: line 1030: cl.exe: command not found
 C compiler test failed.
