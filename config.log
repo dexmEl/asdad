@@ -1,4 +1,4 @@
-# ./configure --toolchain=msvc --enable-gpl --enable-nonfree --enable-cuda --enable-cuvid --enable-nvenc --enable-ffnvcodec --extra-cflags='-IC:/NVIDIA/nv-codec-headers/include -IC:/NVIDIA/NVIDIA-GPU-Computing-Toolkit/CUDA/v13.0/include' --extra-ldflags='-LIBPATH:C:/NVIDIA/nv-codec-headers/Lib/x64 -LIBPATH:C:/NVIDIA/NVIDIA-GPU-Computing-Toolkit/CUDA/v13.0/lib/x64'
+# ./configure --toolchain=msvc --enable-gpl --enable-nonfree --enable-cuda --enable-cuvid --enable-nvenc --enable-ffnvcodec --extra-cflags='-IC:/NVIDIA/nv-codec-headers/include -IC:/CUDA/v13.0/include' --extra-ldflags='-LIBPATH:C:/NVIDIA/nv-codec-headers/Lib/x64 -LIBPATH:C:/CUDA/v13.0/lib/x64'
 ACLOCAL_PATH=/mingw64/share/aclocal:/usr/share/aclocal
 ALLUSERSPROFILE='C:\ProgramData'
 ALL_COMPONENTS='
@@ -8184,7 +8184,7 @@ FEATURE_LIST='
     swscale_alpha
     unstable
 '
-FFMPEG_CONFIGURATION='--toolchain=msvc --enable-gpl --enable-nonfree --enable-cuda --enable-cuvid --enable-nvenc --enable-ffnvcodec --extra-cflags='\''-IC:/NVIDIA/nv-codec-headers/include -IC:/NVIDIA/NVIDIA-GPU-Computing-Toolkit/CUDA/v13.0/include'\'' --extra-ldflags='\''-LIBPATH:C:/NVIDIA/nv-codec-headers/Lib/x64 -LIBPATH:C:/NVIDIA/NVIDIA-GPU-Computing-Toolkit/CUDA/v13.0/lib/x64'\'''
+FFMPEG_CONFIGURATION='--toolchain=msvc --enable-gpl --enable-nonfree --enable-cuda --enable-cuvid --enable-nvenc --enable-ffnvcodec --extra-cflags='\''-IC:/NVIDIA/nv-codec-headers/include -IC:/CUDA/v13.0/include'\'' --extra-ldflags='\''-LIBPATH:C:/NVIDIA/nv-codec-headers/Lib/x64 -LIBPATH:C:/CUDA/v13.0/lib/x64'\'''
 FILTER_LIST='aap_filter
 abench_filter
 acompressor_filter
@@ -9425,7 +9425,7 @@ INTRINSICS_LIST='
 '
 LC_ALL=C
 LC_CTYPE=en_US.UTF-8
-LDFLAGS=' -LIBPATH:C:/NVIDIA/nv-codec-headers/Lib/x64 -LIBPATH:C:/NVIDIA/NVIDIA-GPU-Computing-Toolkit/CUDA/v13.0/lib/x64'
+LDFLAGS=' -LIBPATH:C:/NVIDIA/nv-codec-headers/Lib/x64 -LIBPATH:C:/CUDA/v13.0/lib/x64'
 LD_LIB=-l%
 LD_O='-o $@'
 LD_PATH=-L
@@ -9784,7 +9784,7 @@ PKG_CONFIG_PATH=/mingw64/lib/pkgconfig:/mingw64/share/pkgconfig
 PKG_CONFIG_SYSTEM_INCLUDE_PATH=/mingw64/include
 PKG_CONFIG_SYSTEM_LIBRARY_PATH=/mingw64/lib
 POSIXLY_CORRECT=y
-PPID=1455
+PPID=1248
 PRINTER='HP ENVY 7640 series [E236E4]'
 PROCESSOR_ARCHITECTURE=AMD64
 PROCESSOR_IDENTIFIER='AMD64 Family 25 Model 33 Stepping 2, AuthenticAMD'
@@ -10049,7 +10049,7 @@ VERSION_SCRIPT_POSTPROCESS_CMD=cat
 WINDIR='C:\Windows'
 X86ASM_O='-o $@'
 XDG_DATA_DIRS=/mingw64/share/:/usr/local/share/:/usr/share/
-_='# ./configure --toolchain=msvc --enable-gpl --enable-nonfree --enable-cuda --enable-cuvid --enable-nvenc --enable-ffnvcodec --extra-cflags='\''-IC:/NVIDIA/nv-codec-headers/include -IC:/NVIDIA/NVIDIA-GPU-Computing-Toolkit/CUDA/v13.0/include'\'' --extra-ldflags='\''-LIBPATH:C:/NVIDIA/nv-codec-headers/Lib/x64 -LIBPATH:C:/NVIDIA/NVIDIA-GPU-Computing-Toolkit/CUDA/v13.0/lib/x64'\'''
+_='# ./configure --toolchain=msvc --enable-gpl --enable-nonfree --enable-cuda --enable-cuvid --enable-nvenc --enable-ffnvcodec --extra-cflags='\''-IC:/NVIDIA/nv-codec-headers/include -IC:/CUDA/v13.0/include'\'' --extra-ldflags='\''-LIBPATH:C:/NVIDIA/nv-codec-headers/Lib/x64 -LIBPATH:C:/CUDA/v13.0/lib/x64'\'''
 a3dscope_filter=yes
 a64_muxer=yes
 a64multi5_encoder=yes
@@ -12435,7 +12435,7 @@ exr_decoder_select=bswapdsp
 exr_encoder=yes
 exr_encoder_deps=zlib
 ext=xop
-extra_cflags=' -IC:/NVIDIA/nv-codec-headers/include -IC:/NVIDIA/NVIDIA-GPU-Computing-Toolkit/CUDA/v13.0/include'
+extra_cflags=' -IC:/NVIDIA/nv-codec-headers/include -IC:/CUDA/v13.0/include'
 extract_extradata_bsf=yes
 extract_mvs_example=yes
 extract_mvs_example_deps='avcodec avformat avutil'
@@ -14859,7 +14859,7 @@ opt=libxeve
 optimizations=yes
 option=ffnvcodec
 optname=extra_cflags
-optval='-LIBPATH:C:/NVIDIA/nv-codec-headers/Lib/x64 -LIBPATH:C:/NVIDIA/NVIDIA-GPU-Computing-Toolkit/CUDA/v13.0/lib/x64'
+optval='-LIBPATH:C:/NVIDIA/nv-codec-headers/Lib/x64 -LIBPATH:C:/CUDA/v13.0/lib/x64'
 opus_decoder=yes
 opus_decoder_deps=swresample
 opus_encoder=yes
@@ -15295,7 +15295,7 @@ qtrle_decoder=yes
 qtrle_encoder=yes
 quirc_filter=yes
 quirc_filter_deps=libquirc
-r=''\''-LIBPATH:C:/NVIDIA/nv-codec-headers/Lib/x64 -LIBPATH:C:/NVIDIA/NVIDIA-GPU-Computing-Toolkit/CUDA/v13.0/lib/x64'\'''
+r=''\''-LIBPATH:C:/NVIDIA/nv-codec-headers/Lib/x64 -LIBPATH:C:/CUDA/v13.0/lib/x64'\'''
 r10k_decoder=yes
 r10k_encoder=yes
 r210_decoder=yes
@@ -16377,33 +16377,33 @@ zoompan_filter_deps=swscale
 zscale_filter=yes
 zscale_filter_deps='libzimg const_nan'
 mktemp -u XXXXXX
-0OvZii
+RM6fMx
 WARNING: Unknown C compiler cl.exe, unable to select optimal CFLAGS
 test_cpp_condition windows.h _MSC_FULL_VER >= 193030705
 test_cpp
-BEGIN ./ffconf.E8L3M5v3/test.c
+BEGIN ./ffconf.Q0AJ8otN/test.c
     1	#include <windows.h>
     2	#if !(_MSC_FULL_VER >= 193030705)
     3	#error "unsatisfied condition: _MSC_FULL_VER >= 193030705"
     4	#endif
-END ./ffconf.E8L3M5v3/test.c
-cl.exe -E -o ./ffconf.E8L3M5v3/test.o ./ffconf.E8L3M5v3/test.c
+END ./ffconf.Q0AJ8otN/test.c
+cl.exe -E -o ./ffconf.Q0AJ8otN/test.o ./ffconf.Q0AJ8otN/test.c
 ./configure: line 1030: cl.exe: command not found
 test_host_cpp_condition windows.h _MSC_FULL_VER >= 193030705
 test_host_cpp
-BEGIN ./ffconf.E8L3M5v3/test.c
+BEGIN ./ffconf.Q0AJ8otN/test.c
     1	#include <windows.h>
     2	#if !(_MSC_FULL_VER >= 193030705)
     3	#error "unsatisfied condition: _MSC_FULL_VER >= 193030705"
     4	#endif
-END ./ffconf.E8L3M5v3/test.c
-cl.exe -E -o ./ffconf.E8L3M5v3/test.o ./ffconf.E8L3M5v3/test.c
+END ./ffconf.Q0AJ8otN/test.c
+cl.exe -E -o ./ffconf.Q0AJ8otN/test.o ./ffconf.Q0AJ8otN/test.c
 ./configure: line 1030: cl.exe: command not found
 test_ld cc
 test_cc
-BEGIN ./ffconf.E8L3M5v3/test.c
+BEGIN ./ffconf.Q0AJ8otN/test.c
     1	int main(void){ return 0; }
-END ./ffconf.E8L3M5v3/test.c
-cl.exe -IC:/NVIDIA/nv-codec-headers/include -IC:/NVIDIA/NVIDIA-GPU-Computing-Toolkit/CUDA/v13.0/include -c -o ./ffconf.E8L3M5v3/test.o ./ffconf.E8L3M5v3/test.c
+END ./ffconf.Q0AJ8otN/test.c
+cl.exe -IC:/NVIDIA/nv-codec-headers/include -IC:/CUDA/v13.0/include -c -o ./ffconf.Q0AJ8otN/test.o ./ffconf.Q0AJ8otN/test.c
 ./configure: line 1030: cl.exe: command not found
 C compiler test failed.
